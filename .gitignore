@@ -1,4 +1,6 @@
 config/database.yml
+config/nginx.conf
+config/god.rb
 db/*.db
 log/*.log
 pkg
