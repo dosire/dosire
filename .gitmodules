@@ -7,3 +7,6 @@
 [submodule "vendor/plugins/dataset"]
 	path = vendor/plugins/dataset
 	url = git://github.com/aiwilliams/dataset.git
+[submodule "vendor/extensions/multi_site"]
+	path = vendor/extensions/multi_site
+	url = git://github.com/radiant/radiant-multi-site-extension.git
