@@ -47,6 +47,6 @@ namespace :deploy do
     run "cp #{production_db_config} #{release_path}/config/database.yml"
   end
   
-  after "deploy:update_code", "deploy:copy_database_configurations"
+  after "deploy:update_code", "deploy:copy_database_configuration"
 end
 
