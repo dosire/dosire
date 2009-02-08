@@ -1,8 +1,8 @@
-set :application, "radiant"
+set :application, "dosire"
 
 set :scm, "git"
 set :scm_user, "dosire"
-set :repository,  "git@github.com:dosire/radiant.git"
+set :repository,  "git@github.com:dosire/dosire.git"
 set :branch, "master"
 set :git_enable_submodules, 1
 
@@ -24,7 +24,7 @@ set :deploy_via, :remote_cache
 # servers (which is the default), you can specify the actual location
 set :deploy_to, "/home/#{user}/#{application}"
 
-set :domain, "XXXXXXXX"
+set :domain, "173.45.238.152"
 role :app, "#{domain}"
 role :web, "#{domain}"
 role :db,  "#{domain}", :primary => true
@@ -41,19 +41,12 @@ namespace :deploy do
     cleanup 
   end
   
-  #Copy in the configurations
-  task :copy_configurations do
-    # Copy local database.yml to the new remote release.
-    put File.read(File.join(File.dirname(__FILE__), 'database.yml')),
-        File.join(current_release, 'config', 'database.yml')
-    # Copy local nginx.conf to the new remote release.
-    put File.read(File.join(File.dirname(__FILE__), 'nginx.conf')),
-        File.join(current_release, 'config', 'nginx.conf')
-    # Copy local god.config to the new remote release.
-    put File.read(File.join(File.dirname(__FILE__), 'god.config')),
-        File.join(current_release, 'config', 'god.config')
+  #Copy in the database codes
+  task :copy_database_configuration do
+    production_db_config = "/home/#{user}/services/dosire_production_database.yml"
+    run "cp #{production_db_config} #{release_path}/config/database.yml"
   end
   
-  after "deploy:update_code", "deploy:copy_configurations"
+  after "deploy:update_code", "deploy:copy_database_configurations"
 end
 
