@@ -77,6 +77,14 @@ ActiveRecord::Schema.define(:version => 20081203140407) do
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
+  create_table "sites", :force => true do |t|
+    t.string  "name"
+    t.string  "domain"
+    t.integer "homepage_id"
+    t.integer "position",    :default => 0
+    t.string  "base_domain"
+  end
+
   create_table "snippets", :force => true do |t|
     t.string   "name",          :limit => 100, :default => "", :null => false
     t.string   "filter_id",     :limit => 25
