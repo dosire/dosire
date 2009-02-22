@@ -13,3 +13,6 @@
 [submodule "vendor/extensions/language_redirect"]
 	path = vendor/extensions/language_redirect
 	url = git://github.com/intinig/radiant_language_redirect_extension.git
+[submodule "vendor/extensions/paperclipped"]
+	path = vendor/extensions/paperclipped
+	url = git@github.com:dosire/paperclipped.git
