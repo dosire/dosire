@@ -22,3 +22,6 @@
 [submodule "vendor/extensions/settings"]
 	path = vendor/extensions/settings
 	url = git://github.com/Squeegy/radiant-settings.git
+[submodule "vendor/extensions/parameterized_snippets"]
+	path = vendor/extensions/parameterized_snippets
+	url = git://github.com/manuelmeurer/radiant-parameterized-snippets-extension.git
