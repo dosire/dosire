@@ -16,3 +16,6 @@
 [submodule "vendor/extensions/paperclipped"]
 	path = vendor/extensions/paperclipped
 	url = git@github.com:dosire/paperclipped.git
+[submodule "vendor/extensions/paperclipped_multi_site"]
+	path = vendor/extensions/paperclipped_multi_site
+	url = git@github.com:dosire/radiant-paperclipped_multisite-extension.git
