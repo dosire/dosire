@@ -1,6 +1,6 @@
 LowPro = {};
 LowPro.Version = '0.5';
-LowPro.CompatibleWithPrototype = '1.6.0';
+LowPro.CompatibleWithPrototype = '1.6.0.1';
 
 if (Prototype.Version != LowPro.CompatibleWithPrototype && console && console.warn)
   console.warn("This version of Low Pro is tested with Prototype " + LowPro.CompatibleWithPrototype + 
