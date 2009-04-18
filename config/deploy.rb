@@ -47,6 +47,12 @@ namespace :deploy do
     run "cp #{production_db_config} #{release_path}/config/database.yml"
   end
   
-  after "deploy:update_code", "deploy:copy_database_configuration"
+  #Copy in the database codes
+  task :copy_email_configuration do
+    production_db_config = "/home/#{user}/services/dosire_production_email.yml"
+    run "cp #{production_db_config} #{release_path}/config/email.yml"
+  end
+  
+  after "deploy:update_code", "deploy:copy_database_configuration", "deploy:copy_mail_configuration"
 end
 
