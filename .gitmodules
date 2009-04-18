@@ -28,3 +28,6 @@
 [submodule "vendor/extensions/mailer"]
 	path = vendor/extensions/mailer
 	url = git://github.com/radiant/radiant-mailer-extension.git
+[submodule "vendor/plugins/yaml_mail_config"]
+	path = vendor/plugins/yaml_mail_config
+	url = git://github.com/nofxx/yaml_mail_config.git
