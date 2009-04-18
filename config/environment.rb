@@ -89,3 +89,4 @@ Radiant::Initializer.run do |config|
     ResponseCache.defaults[:logger]    = ActionController::Base.logger
   end
 end
+Radiant::Config['mailer.post_to_page?'] = true
