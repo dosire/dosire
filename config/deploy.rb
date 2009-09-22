@@ -11,7 +11,7 @@ set :user, "sytse"
 set :use_sudo, false
 
 # SSH options, 
-ssh_options[:port] = 25
+ssh_options[:port] = 22
 ssh_options[:auth_methods] = %w(publickey hostbased) 
 # Skip the known_hosts verification since known_keys is in a non-standard location
 ssh_options[:paranoid] = false
